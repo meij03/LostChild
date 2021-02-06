@@ -1,0 +1,1 @@
+This folder is used to keep track of the js files of each screen
