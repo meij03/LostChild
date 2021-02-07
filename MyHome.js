@@ -1,7 +1,6 @@
 //This file is made from 'Welcome.js' and no changes were required to be done for using this 'Welcome.js'
-//There are two fixes which are to be done: (1) Making maps1 image clickable (2) fixing the 'window' and 'park' images.
+// I have attached 2 edited images (window and woodfloor) in this branch:
 //Below is the code:
-
 
 function WelcomeScreen(props){
     return (
