@@ -11,6 +11,7 @@ import { ImageBackground,
 import app from '../App';
 
 
+
 //import characterSelect from './Character';
 
 function WelcomePage({navigation},props){
@@ -24,9 +25,11 @@ function WelcomePage({navigation},props){
                 style = {styles.title}>
                 MIRACLE WELCOME BACK
             </Text>
+            
             <Image 
-            style = {styles.avatarImage}
+            style = {styles.avatarBunny}
             source = {require("../assets/bunny.png")}/>
+
             
              <View
                 //Button 

@@ -1,12 +1,26 @@
 import React from 'react';
-import {StyleSheet,Text} from 'react-native';
-//import {setCustomText} from 'react-native-global-props'
+import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView} from 'react-native';
 
 function characterSelect(props){
     return (
-        <Text>
-            hello
-        </Text>
+        //source={require("../assets/icon.png")}
+        <ImageBackground
+            style= {styles.background}
+            image source = {require("../assets/welcomeBack.png")}
+            >
+                <Image 
+                style = {styles.avatarCat}
+                source = {require("../assets/bunny.png")}/>
+            {/* < Image  
+            
+            style = {styles.avatarDog}
+                source = {require("../assets/arrogantCat.png")}/>
+            < Image 
+                style = {styles.avatarRabbit}
+                source = {require("../assets/awkwardDog.png")}/>
+            */}
+                
+        </ImageBackground>
     );
 }
 
@@ -20,8 +34,31 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         //flexWrap: "wrap"
     },
-    avatarImage:{
-        //avatar image - positioning and size
+    avatarCat:{
+        //avatar cat - positioning and size
+        height: "50%",
+        width : "80%",
+        position: 'absolute', 
+        top: 220
+    },
+    
+    avatarDog:{
+        //avatar dog - positioning and size
+        height: "50%",
+        width : "80%",
+        position: 'absolute', 
+        top: 100
+    },
+    
+    avatarRabbit:{
+        //avatar rabbit - positioning and size
+        height: "50%",
+        width : "80%",
+        position: 'absolute', 
+        top: 50
+    },
+    avatarBunny:{
+        //avatar bunny - positioning and size - welcome page
         height: "50%",
         width : "80%",
         position: 'absolute', 
