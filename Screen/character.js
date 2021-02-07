@@ -1,25 +1,33 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView} from 'react-native';
 //import {setCustomText} from 'react-native-global-props'
 
 function characterSelect(props){
+    //console.log("hello world");
     return (
         //source={require("../assets/icon.png")}
         <ImageBackground
             style= {styles.background}
             image source = {require("../assets/welcomeBack.png")}
             >
-                <Image 
+                <Text 
+                style = {styles.mytitle}>
+                character page
+            </Text>
+            
+            
+             <Image 
                 style = {styles.avatarCat}
                 source = {require("../assets/bunny.png")}/>
-            {/* < Image  
+            < Image  
             
             style = {styles.avatarDog}
                 source = {require("../assets/arrogantCat.png")}/>
             < Image 
                 style = {styles.avatarRabbit}
                 source = {require("../assets/awkwardDog.png")}/>
-            */}
+           
                 
         </ImageBackground>
     );
@@ -58,31 +66,8 @@ const styles = StyleSheet.create({
         position: 'absolute', 
         top: 50
     },
-    avatarBunny:{
-        //avatar bunny - positioning and size - welcome page
-        height: "50%",
-        width : "80%",
-        position: 'absolute', 
-        top: 220
-    },
-    welcomeButton: {
-        //Button style
-        borderWidth:3,
-        borderColor:'#8383C6',
-        borderRadius: 10,
-        width: "70%",
-        height: 70, 
-        backgroundColor: '#b3d0ce',
-        top: -100,
-        //alignItems: 'center'
-    },
-    styledText: {
-        //Font of the button
-        color: 'black',
-        fontSize: 40,
-        right: -30
-    },
-    title: {
+    
+    mytitle: {
         //Title
         fontWeight: 'bold',
         color: 'black',
@@ -91,5 +76,5 @@ const styles = StyleSheet.create({
         
     },
 });
-
+ 
 export default characterSelect;
