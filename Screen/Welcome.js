@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         //flexWrap: "wrap"
     },
-    avatarImage:{
+    avatarBunny:{
         //avatar image - positioning and size
         height: "50%",
         width : "80%",

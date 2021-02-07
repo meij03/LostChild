@@ -4,10 +4,11 @@ import React from 'react';
 import { StyleSheet} from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-//import appRoute from './appRoute'
 import WelcomePage from './screen/Welcome';
 import CharacterSelect from './screen/Character';
+
 const stack = createStackNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>
