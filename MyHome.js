@@ -2,22 +2,16 @@
 //There are two fixes which are to be done: (1) Making maps1 image clickable (2) fixing the 'window' and 'park' images.
 //Below is the code:
 
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 
 function WelcomeScreen(props){
     return (
-        //source={require("../assets/icon.png")}
+        //background image of flooring
         <ImageBackground
             style= {styles.background}
             image source = {require("../assets/woodfloor.jpg")}
             >
-               
-            <Text 
-                style = {styles.title}>
-                150
-            </Text>
+        
+            <Text  style = {styles.score}> 150 </Text>
             
             <Image 
             style = {styles.superHero}
@@ -35,14 +29,23 @@ function WelcomeScreen(props){
             style = {styles.maps1}
             source = {require("../assets/maps1.png")}/>
             <Image 
-            style = {styles.park}
-            source = {require("../assets/park.jpg")}/>
-            <Image 
             style = {styles.window}
-            source = {require("../assets/window.png")}/>
-            
+            source = {require("../assets/mywindow.png")}>
+          </Image>
+        
           
-           
+        <View>
+        {/* touchable opacity makes an image clickable and below code does nto gives alert message but also 
+        there are no errors.  */}
+        <TouchableOpacity  onPress={()=> {Alert.alert('You clicked it!', 'You clicked it!')}} >
+ 
+        <Image 
+            style = {styles.maps1}
+            source = {require("../assets/maps1.png")}/>
+          
+        </TouchableOpacity>
+
+        </View>
         </ImageBackground>
     );
     }
@@ -67,10 +70,10 @@ const styles = StyleSheet.create({
     coins:{
         //avatar image - positioning and size
         height: "10%",
-        width : "40%",
+        width : "20%",
         position: 'absolute',
         top: 1,
-        right:30
+        right:70
     },
     progressbar:{
         //avatar image - positioning and size
@@ -107,6 +110,16 @@ const styles = StyleSheet.create({
     window:{
         //avatar image - positioning and size
         height: "28%",
+        width : "90%",
+        position: 'absolute',
+        opacity:0.8,
+        top: 120,
+       
+        left:45
+    },
+    mywindow:{
+        //avatar image - positioning and size
+        height: "28%",
         width : "75%",
         position: 'absolute',
         opacity:0.8,
@@ -114,8 +127,8 @@ const styles = StyleSheet.create({
        
         left:45
     },
-    title: {
-        //Title
+    score: {
+        //score:150
         fontWeight: 'bold',
         color: 'black',
         fontSize: 35,
