@@ -13,7 +13,7 @@ The code for the application is JavaScript and completely front-end. You will fi
 
 - Map - The final screen created, where it was intended to allow user to go to different screens such as mall, park, and grocery. 
 
-In the app.js file you will see the use of react-native navigation where it make use of a stack to keep track of the screens. The screen names are order by the order that was intended for the user to interact with. 
+In the app.js file you will see the use of react-native navigation where it make use of a stack to keep track of the screens. The screen names are ordered by the order that was intended for the user to interact with. 
 
 Welcome -> Character -> Home -> Maps
 
