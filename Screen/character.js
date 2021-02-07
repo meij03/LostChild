@@ -38,7 +38,7 @@ function characterSelect({navigation}, props){
                 style = {styles.Button} 
                 >
                 <TouchableOpacity 
-                    onPress = {() => navigation.navigate('Maps')}>
+                    onPress = {() => navigation.navigate('Home')}>
                     
                     <Text style = {styles.styledText}>
                         Home

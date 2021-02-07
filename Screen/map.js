@@ -6,7 +6,7 @@ import { ImageBackground,
     View,  
     Image, 
     TouchableOpacity,
-    TouchableHighlight} 
+    Text} 
     from 'react-native';
 import app from '../App';
 
@@ -17,6 +17,13 @@ function worldMap({navigation},props){
         style= {styles.background}
         image source = {require("../assets/maps.png")}
         >
+        {/**
+         * There are 4 view where each represents the gray area 
+         * behind the icons. The intended purpose is for these background to 
+         * serve as button, that will redirect you to the next pages.
+         * However this is the last working page so it is set to console.log instead
+         */}
+        
         <View
             //cart Button 
             style = { 
@@ -32,25 +39,25 @@ function worldMap({navigation},props){
             styles.mallButton} 
         >
             <TouchableOpacity 
-                onPress = {() => navigation.navigate('mall')}>
+                onPress = {() => console.log("Mall")}>
             </TouchableOpacity>
         </View> 
         <View
-            //home Button 
+            //home Button - Suppose to be able to navigate to home
             style = { 
             styles.homeButton} 
         >
             <TouchableOpacity 
-                onPress = {() => navigation.navigate('home')}>
+                onPress = {() => console.log("Home")}>
             </TouchableOpacity>
         </View> 
         <View
-            //cart Button 
+            //park Button 
             style = { 
             styles.parkButton} 
         >
             <TouchableOpacity 
-                onPress = {() => navigation.navigate('park')}>
+                onPress = {() => console.log("Park")}>
             </TouchableOpacity>
         </View>  
 
@@ -146,7 +153,8 @@ const styles = StyleSheet.create({
         width: "30%",
         borderRadius: 100,
         top: 100,
-        left: -120
+        left: -120,
+        alignItems: 'center'
     },
     parkButton:{
         backgroundColor:"gray",
@@ -155,7 +163,8 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         top: 70,
         left: 120
-    }
+    },
+
 });
 
 
