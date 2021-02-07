@@ -1,6 +1,5 @@
 import React from 'react';
 import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView} from 'react-native';
-//import {setCustomText} from 'react-native-global-props'
 
 function characterSelect(props){
     return (
