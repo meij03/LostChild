@@ -5,7 +5,7 @@ import { StyleSheet} from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import WelcomePage from './screen/Welcome';
-import CharacterSelect from './screen/Character';
+import characterSelect from './screen/character';
 
 const stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ export default function App() {
     <NavigationContainer>
       <stack.Navigator>
         <stack.Screen name = "Welcome" component = {WelcomePage}/>
-        <stack.Screen name = "Character" component = {CharacterSelect}/>
+        <stack.Screen name = "Character" component = {characterSelect}/>
       </stack.Navigator>
     </NavigationContainer>
   );

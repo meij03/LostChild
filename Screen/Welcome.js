@@ -62,10 +62,10 @@ const styles = StyleSheet.create({
     },
     avatarBunny:{
         //avatar image - positioning and size
-        height: "50%",
+        height: "55%",
         width : "80%",
         position: 'absolute', 
-        top: 220
+        top: 150
     },
     welcomeButton: {
         //Button style

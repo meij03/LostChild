@@ -1,8 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView} from 'react-native';
+import { ImageBackground,
+    StyleSheet, 
+    View, 
+    Text, 
+    Image, 
+    SafeAreaView,
+    TouchableOpacity
+} from 'react-native';
+import app from '../App';
 
-function characterSelect(props){
+function characterSelect({navigation}, props){
     //console.log("hello world");
     return (
         //source={require("../assets/icon.png")}
@@ -10,22 +18,17 @@ function characterSelect(props){
             style= {styles.background}
             image source = {require("../assets/welcomeBack.png")}
             >
-                <Text 
-                style = {styles.mytitle}>
-                character page
-            </Text>
             
-            
-             <Image 
-                style = {styles.avatarCat}
+            <Image 
+                //resizeMode = "contain"
+                style = {styles.avatarBunny}
                 source = {require("../assets/bunny.png")}/>
-            < Image  
-            
-            style = {styles.avatarDog}
+             < Image  
+                style = {styles.avatarCat}
                 source = {require("../assets/arrogantCat.png")}/>
             < Image 
-                style = {styles.avatarRabbit}
-                source = {require("../assets/awkwardDog.png")}/>
+                style = {styles.avatarDog}
+                source = {require("../assets/awkwardDog.png")}/> 
            
                 
         </ImageBackground>
@@ -42,28 +45,31 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         //flexWrap: "wrap"
     },
-    avatarCat:{
+    avatarBunny:{
         //avatar cat - positioning and size
-        height: "50%",
-        width : "80%",
+        height: "30%",
+        width : "40%",
         position: 'absolute', 
-        top: 220
+        top: 40,
+        left: 40
+    },
+    
+    avatarCat:{
+        //avatar Cat - positioning and size
+        height: "30%",
+        width : "40%",
+        position: 'absolute', 
+        top: 200,
+        right: 20
     },
     
     avatarDog:{
-        //avatar dog - positioning and size
-        height: "50%",
-        width : "80%",
+        //avatar Dog - positioning and size
+        height: "30%",
+        width : "40%",
         position: 'absolute', 
-        top: 100
-    },
-    
-    avatarRabbit:{
-        //avatar rabbit - positioning and size
-        height: "50%",
-        width : "80%",
-        position: 'absolute', 
-        top: 50
+        top: 350,
+        left: 30
     },
     
     mytitle: {
