@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView, TouchableOpacity} from 'react-native';
-import {setCustomText} from 'react-native-global-props'
-import {characterSelect} from './character'
+//import {setCustomText} from 'react-native-global-props'
+//import {characterSelect} from './character'
 
 function WelcomeScreen(props){
     return (
@@ -15,9 +15,11 @@ function WelcomeScreen(props){
                 style = {styles.title}>
                 MIRACLE WELCOME BACK
             </Text>
+            
             <Image 
-            style = {styles.avatarImage}
+            style = {styles.avatarBunny}
             source = {require("../assets/bunny.png")}/>
+
             
             <View
                 //Button 
