@@ -22,20 +22,24 @@ function WelcomePage({navigation},props){
             image source = {require("../assets/welcomeBack.png")}
             >
             <Text 
+                //Title 
                 style = {styles.title}>
                 MIRACLE WELCOME BACK
             </Text>
             
             <Image 
+            //Image of bunny
             style = {styles.avatarBunny}
             source = {require("../assets/bunny.png")}/>
 
             
              <View
-                //Button 
+                //Welcome Button 
                 style = {styles.welcomeButton} 
             >
                 <TouchableOpacity 
+                    //Navigation set up to bring you to the character's page
+                    //when clicked or pressed
                     onPress = {() => navigation.navigate('Character')}>
                     
                     <Text style = {styles.styledText}>

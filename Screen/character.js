@@ -6,29 +6,45 @@ import { ImageBackground,
     Text, 
     Image, 
     SafeAreaView,
-    TouchableOpacity
+    TouchableOpacity,
+    Button
 } from 'react-native';
 import app from '../App';
 
 function characterSelect({navigation}, props){
-    //console.log("hello world");
     return (
-        //source={require("../assets/icon.png")}
         <ImageBackground
             style= {styles.background}
             image source = {require("../assets/welcomeBack.png")}
             >
             
             <Image 
-                //resizeMode = "contain"
+                //Image of a bunny (main bunny seen in welcome page)
                 style = {styles.avatarBunny}
                 source = {require("../assets/bunny.png")}/>
-             < Image  
+            
+            
+            < Image  
+                //Image of cat 
                 style = {styles.avatarCat}
                 source = {require("../assets/arrogantCat.png")}/>
             < Image 
+                //Image of dog
                 style = {styles.avatarDog}
                 source = {require("../assets/awkwardDog.png")}/> 
+
+            <View
+                //Button that will bring you to the home pages
+                style = {styles.Button} 
+                >
+                <TouchableOpacity 
+                    onPress = {() => navigation.navigate('Maps')}>
+                    
+                    <Text style = {styles.styledText}>
+                        Home
+                    </Text>
+                </TouchableOpacity>
+            </View> 
            
                 
         </ImageBackground>
@@ -44,6 +60,27 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         //flexWrap: "wrap"
+    },
+    Button: {
+        //Button style
+        borderWidth:3,
+        borderColor:'#8383C6',
+        borderRadius: 10,
+        width: "30%",
+        height:100, 
+        backgroundColor: '#b3d0ce',
+        top: -100,
+        left: 80
+    },
+    styledText: {
+        //Font of the button
+        color: 'black',
+        fontSize: 25,
+        right: -30,
+        alignItems: 'center',
+        justifyContent: "center",
+        top: 30,
+        left: 10
     },
     avatarBunny:{
         //avatar cat - positioning and size

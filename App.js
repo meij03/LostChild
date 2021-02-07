@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import WelcomePage from './screen/Welcome';
 import characterSelect from './screen/character';
+import worldMap from './screen/map'; 
 
 const stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ export default function App() {
       <stack.Navigator>
         <stack.Screen name = "Welcome" component = {WelcomePage}/>
         <stack.Screen name = "Character" component = {characterSelect}/>
+        <stack.Screen name = "Maps" component = {worldMap}/>
       </stack.Navigator>
     </NavigationContainer>
   );
