@@ -10,9 +10,10 @@ import { ImageBackground,
     from 'react-native';
 import app from '../App';
 
+//Welcome page, it should show the avatar/animal chosen 
+//By default is it set to Miracle Welcome Back, but if we do keep
+//track of name it use the username in it's place
 
-
-//import characterSelect from './Character';
 
 function WelcomePage({navigation},props){
     return (
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#8383C6',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        //flexWrap: "wrap"
     },
     avatarBunny:{
         //avatar image - positioning and size
@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
         height: 70, 
         backgroundColor: '#b3d0ce',
         top: -100,
-        //alignItems: 'center'
     },
     styledText: {
         //Font of the button

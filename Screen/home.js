@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ImageBackground,
     StyleSheet,  
@@ -9,6 +8,10 @@ import { ImageBackground,
     TouchableOpacity} 
     from 'react-native';
 import app from '../App';
+
+//Home Page: Users are able to interact with their selected avatar and 
+//do different activities, currently only the pillow icon which is sleep
+//is shown. The map icon is clickable and should direct you to the maps page
 
 function myHome({navigation}, props){
     return (
@@ -43,7 +46,7 @@ function myHome({navigation}, props){
                     //when clicked or pressed
                     onPress = {() => navigation.navigate('Maps')}>
                         
-                    <Text style = {styles.styledText}>
+                    <Text>
                         Maps
                     </Text>
                 </TouchableOpacity>
@@ -68,8 +71,6 @@ function myHome({navigation}, props){
 
 const styles = StyleSheet.create({
     background: {
-        //Background image style- it affects other components as well
-        //because the button and image are both inside of the imageBackground component
         flex: 1, 
         backgroundColor: '#b3d0ce',
         alignItems: 'center',
@@ -124,10 +125,6 @@ const styles = StyleSheet.create({
         top: 390,
         left:5,
         alignItems:'center'
-    },
-    text:{
-        fontSize:60,
-        alignItems: 'center'
     },
     park:{
         //avatar image - positioning and size

@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ImageBackground,
     StyleSheet,  
@@ -9,6 +8,10 @@ import { ImageBackground,
     Text} 
     from 'react-native';
 import app from '../App';
+
+//Maps page: Intended for user to be able to navigate between
+//selected pages. This is the last navigated page and it would not 
+//be able to go to other pages.  
 
 function worldMap({navigation},props){
     return (

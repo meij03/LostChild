@@ -1,15 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ImageBackground,
     StyleSheet, 
     View, 
     Text, 
     Image, 
-    SafeAreaView,
     TouchableOpacity,
-    Button
 } from 'react-native';
 import app from '../App';
+
+//Character's page: Where user is able to choose they're selected avatar, then
+//be able to move to the home page. Where they're able to interact with 
+//they're selected avatar.
 
 function characterSelect({navigation}, props){
     return (
@@ -17,7 +18,7 @@ function characterSelect({navigation}, props){
             style= {styles.background}
             image source = {require("../assets/welcomeBack.png")}
             >
-            
+
             <Image 
                 //Image of a bunny (main bunny seen in welcome page)
                 style = {styles.avatarBunny}
@@ -53,13 +54,10 @@ function characterSelect({navigation}, props){
 
 const styles = StyleSheet.create({
     background: {
-        //Background image style- it affects other components as well
-        //because the button and image are both inside of the imageBackground component
         flex: 1, 
         backgroundColor: '#8383C6',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        //flexWrap: "wrap"
     },
     Button: {
         //Button style
