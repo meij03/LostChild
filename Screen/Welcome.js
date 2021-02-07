@@ -1,10 +1,20 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ImageBackground,StyleSheet, TouchableHighlight, View, Text, Image, SafeAreaView, TouchableOpacity} from 'react-native';
-//import {setCustomText} from 'react-native-global-props'
-//import {characterSelect} from './character'
+import { ImageBackground,
+    StyleSheet,  
+    View, 
+    Text, 
+    Image, 
+    TouchableOpacity} 
+    from 'react-native';
+import app from '../App';
 
-function WelcomeScreen(props){
+
+
+//import characterSelect from './Character';
+
+function WelcomePage({navigation},props){
     return (
         //source={require("../assets/icon.png")}
         <ImageBackground
@@ -21,31 +31,25 @@ function WelcomeScreen(props){
             source = {require("../assets/bunny.png")}/>
 
             
-            <View
+             <View
                 //Button 
                 style = {styles.welcomeButton} 
             >
                 <TouchableOpacity 
-                    onPress = {() => console.log("Button pressed")}>
+                    onPress = {() => navigation.navigate('Character')}>
+                    
                     <Text style = {styles.styledText}>
                         start here
                     </Text>
                 </TouchableOpacity>
-            </View>
+            </View> 
         </ImageBackground>
     );
 }
 
-// const customTextProps = {
-//     //custom text <-- contribution from 'react-native-global-props
-//     style: {
-//       fontSize: 16,
-//       fontFamily: Platform.OS === 'ios' ? 'HelveticaNeue' : 'Roboto',
-//       color: 'black'
-//     }
-//   };
 
-//setCustomText(customTextProps);
+
+
 const styles = StyleSheet.create({
     background: {
         //Background image style- it affects other components as well
@@ -90,4 +94,5 @@ const styles = StyleSheet.create({
     },
 });
 
-export default WelcomeScreen;
+
+export default WelcomePage;
